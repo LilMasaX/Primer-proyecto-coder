@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Case</title>
+    <title>Rentabilidades</title>
 
     <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
 
@@ -21,7 +21,7 @@
             <div class="sidebar-logo">
                 <a href="#">Dashboard</a>
             </div>
-            <div class="date-range">01 Mar, 2024 - 14 Oct, 2024</div>
+            <div class="date-range" id="date-range"></div>
             <!-- Sidebar Navigation -->
             <ul class="sidebar-nav p-0">
                 <li class="sidebar-header">Herramientas y componentes</li>
@@ -74,18 +74,63 @@
                 </button>
             </nav>
             <main class="p-3">
-                <header>
-                    <h1>Rentabilidades</h1>
-                    <p>A continuacion encontrará todas las rentabilidades guardadas.</p>
+                <header class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h1>Rentabilidades</h1>
+                        <p>
+                            A continuación encontrará todas las rentabilidades guardadas.
+                        </p>
+                    </div>
+                    <button class="btn-add">Agregar Rentabilidad</button>
                 </header>
-                
+                <div class="container-fluid stats">
+                    <section class="container-fluid stats">
+                        <div class="info-card">
+                            <h2>Enero</h2>
+                        </div>
+                        <div class="info-card">
+                            <h2>Febrero</h2>
+                        </div>
+                        <div class="info-card">
+                            <h2>Marzo</h2>
+                        </div>
+                        <div class="info-card">
+                            <h2>Abril</h2>
+                        </div>
+                        <div class="info-card">
+                            <h2>Mayo</h2>
+                        </div>
+                        <div class="info-card">
+                            <h2>Junio</h2>
+                        </div>
+                        <div class="info-card">
+                            <h2>Julio</h2>
+                        </div>
+                        <div class="info-card">
+                            <h2>Agosto</h2>
+                        </div>
+                        <div class="info-card">
+                            <h2>Septiembre</h2>
+                        </div>
+                        <div class="info-card">
+                            <h2>Octubre</h2>
+                        </div>
+                        <div class="info-card">
+                            <h2>Noviembre</h2>
+                        </div>
+                        <div class="info-card">
+                            <h2>Diciembre</h2>
+                        </div>
+                    </section>
+                </div>
             </main>
         </div>
     </div>
-    <script src="../scripts/script.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="../scripts/script.js"></script>
 </body>
 
 </html>
