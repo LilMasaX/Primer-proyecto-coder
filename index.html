@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- Estilos y fuentes -->
+    <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="sidebar-toggle">
+            <div class="sidebar-logo">
+                <a href="#">Dashboard</a>
+            </div>
+            <div class="date-range">01 Mar, 2024 - 14 Oct, 2024</div>
+            <!-- Sidebar Navigation -->
+            <ul class="sidebar-nav p-0">
+                <li class="sidebar-header">
+                    Herramientas y componentes
+                </li>
+                <li class="sidebar-item">
+                    <a href="index.html" class="sidebar-link">
+                        <i class="lni lni-dashboard-square-1"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./pages/rentabilidades.html" class="sidebar-link">
+                        <i class="lni lni-bar-chart-dollar"></i>
+                        <span>Rentabilidades</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./pages/recaudos.html" class="sidebar-link">
+                        <i class="lni lni-wallet-1"></i>
+                        <span>Recaudos</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./pages/cotizador.html" class="sidebar-link">
+                        <i class="lni lni-refresh-dollar-1"></i>
+                        <span>Cotizador</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./pages/aportes.html" class="sidebar-link">
+                        <i class="lni lni-placeholder-dollar"></i>
+                        <span>Aportes</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- Sidebar Navigation Ends -->
+            <div class="sidebar-footer">
+                <a href="./pages/configuraciones.html" class="sidebar-link">
+                    <i class="lni lni-gear-1"></i>
+                    <span>Configuraciones</span>
+                </a>
+            </div>
+        </aside>
+        <!-- Sidebar Ends -->
+
+        <!-- Main Content -->
+        <div class="main">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand">
+                <button class="toggler-btn" type="button">
+                    <i class="lni lni-menu-hamburger-1"></i>
+                </button>
+            </nav>
+
+            <!-- Contenido principal -->
+            <main class="main-content p-3">
+                <div class="container-fluid stats">
+                    <!-- Balance General -->
+                    <div class="card">
+                        <h2>Balance General</h2>
+                        <p>From 1-14 Mar, 2024</p>
+                        <div class="chart">[Gráfica de líneas]</div>
+                    </div>
+
+                    <!-- Gastos Generales -->
+                    <div class="card">
+                        <h2>Gastos Generales</h2>
+                        <p>$13,000,000 <span class="percentage">+2.4%</span></p>
+                        <div class="chart">[Gráfico circular]</div>
+                    </div>
+
+                    <!-- Mayor Rentabilidad -->
+                    <div class="card">
+                        <h2>Mayor Rentabilidad</h2>
+                        <ul>
+                            <li>Rentabilidad de Marzo: $40,000,000</li>
+                            <li>Rentabilidad de Junio: $37,000,000</li>
+                        </ul>
+                    </div>
+
+                    <!-- Última Rentabilidad -->
+                    <div class="card">
+                        <h2>Última Rentabilidad</h2>
+                        <div class="chart">[Gráfico circular]</div>
+                    </div>
+
+                    <!-- Meta Anual -->
+                    <div class="card">
+                        <h2>Meta Anual</h2>
+                        <p>$103,000,000 de $800,000,000</p>
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center p-3">
+        <p>&copy; Business Case App. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>

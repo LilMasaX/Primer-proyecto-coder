@@ -1,0 +1,318 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+
+/* General */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* sidebar */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+h1 {
+    font-weight: 800;
+}
+
+li {
+    list-style: none;
+}
+
+.sidebar-link i {
+  color: #725cff;
+  font-size: 2.2rem;
+  vertical-align: middle;
+}
+
+.sidebar-link.active {
+    background-color: #2d2d2d;
+    border-left: 4px solid #725cff;
+    padding-left: calc(1.625rem - 4px); /* Ajustamos el padding para compensar el border */
+}
+
+.sidebar-link.active i {
+    color: #8f7fff; 
+}
+
+.sidebar-link.active span {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+#sidebar {
+    max-width: 264px;
+    min-width: 264px;
+    transition: all 0.35s ease-in-out;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar.collapsed {
+    margin-left: -264px;
+}
+
+.toggler-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.toggler-btn i {
+    font-size: 1.50rem;
+    color: #725cff;
+    font-weight: 1000;
+}
+
+.navbar {
+    padding: 1.15rem 1.5rem;
+    border-bottom: 2px dashed #b3a8a8;
+}
+
+.sidebar-nav {
+    flex: 1 1 auto;
+}
+
+.sidebar-logo {
+    padding: 1.15rem 1.5rem;
+    text-align: center;
+}
+
+.sidebar-logo a {
+    color: #FFF;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.sidebar-header {
+    color: #FFF;
+    font-size: 1rem;
+    padding: 1.5rem 1.5rem 2.375rem;
+}
+
+a.sidebar-link {
+    padding: 1.625rem 1.625rem 2.625rem;
+    color: #FFF;
+    position: relative;
+    transition: all 0.35s;
+    display: block;
+    font-size: 1rem;
+}
+
+a.sidebar-link:hover {
+    background-color: #f9f6f630;
+}
+
+.sidebar-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(-135deg);
+    transition: all .2s ease-out;
+}
+
+.sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+}
+
+
+
+/* Screen size less than 768px */
+
+@media (max-width:768px) {
+
+    .sidebar-toggle {
+        margin-left: -264px;
+    }
+
+    #sidebar.collapsed {
+        margin-left: 0;
+    }
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+header {
+  position: relative;
+  margin: 2rem 2rem 2rem 2rem;
+  align-items: center;
+}
+
+header p{
+
+  margin-top: 1vh;
+}
+
+.date-range {
+  background-color: #3a3a3a;
+  display: inline-block;
+  padding: 2rem 10px;
+  border-radius: 5px;
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* Stats Section */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #1e1e1e;
+  color: #FFF;
+  padding: 4rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 10px; 
+  font-size: 1.350rem;
+}
+.card li{
+  margin-left: 0.21rem
+
+}
+
+.percentage {
+  color: #675baf
+}
+
+.progress-bar {
+  background-color: #3a3a3a; 
+}
+
+.progress{
+  width: 34.5%;
+}
+
+/* Inputs y Selects */
+
+.cotizador-form{
+  width: 85%;
+  margin: 0 auto;
+}
+
+.input-field {
+  width: 100%;
+  display: block;
+  padding: 1rem;
+  margin-top: 5px;
+  border: 1px solid #3a3a3a;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.input-field:focus {
+  border-color: #675baf;
+  outline: none;
+} 
+
+/* Grupos de formulario */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-curso {
+  width: 101.5%;
+  margin-bottom: 20px;
+}
+
+
+label {
+  font-size: 1rem;
+  color: #aaa;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Estilo de las cajas para datos financieros */
+.financial-data {
+  display: grid; 
+  gap: 15px; 
+}
+
+.data-row { 
+  width: 70%;
+  margin: 0 auto;
+  background-color: #292929; 
+  padding: 15px; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.data-row .label {
+  font-size: 1rem;
+  color: #aaa; 
+  margin-right: 15vh;
+}
+
+.data-row .value {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Destacar rentabilidad */
+.data-row.highlight {
+  background-color: #675baf; 
+  color: #fafafa; 
+  font-weight: bold; 
+  
+}
+
+footer{
+  position: relative  ;
+  bottom: 0;
+  width: 100%;
+  background-color: #1e1e1e;
+  color: white;
+  text-align: center;
+  padding: 5vh 0;
+
+}
+
+
+/*    ##################################################################3                   */
+
+
