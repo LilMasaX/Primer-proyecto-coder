@@ -9,24 +9,30 @@ toggler.addEventListener("click", () => {
 
 // Función para manejar los enlaces activos
 function setActiveLink() {
-    // Obtener la ruta actual sin parámetros ni hash
-    const currentPath = window.location.pathname.replace(/\/$/, ""); // Remover barra final si existe
-
+    // Obtener la ruta actual
+    const currentPath = window.location.pathname;
+    
     // Obtener todos los enlaces del sidebar
     const sidebarLinks = document.querySelectorAll('.sidebar-link');
-
-    // Iterar por cada enlace y verificar si coincide con el currentPath
+    
+    // Remover la clase active de todos los enlaces
     sidebarLinks.forEach(link => {
-        // Obtener el atributo href del enlace y normalizarlo
-        const linkPath = new URL(link.getAttribute('href'), window.location.origin).pathname.replace(/\/$/, "");
-
-        // Comparar el currentPath con el linkPath
-        if (currentPath === linkPath) {
-            link.classList.add('active'); // Agregar clase activa
-        } else {
-            link.classList.remove('active'); // Asegurarse de que otros enlaces no estén activos
-        }
+        link.classList.remove('active');
     });
+    
+    // Si estamos en la página principal o en /dashboard
+    if (currentPath === '/' || currentPath.includes('dashboard')) {
+        // Encontrar y activar el enlace de Dashboard
+        const dashboardLink = document.querySelector('.sidebar-link i.lni-dashboard-square-1').parentElement;
+        dashboardLink.classList.add('active');
+    } else {
+        // Para otras páginas, buscar el enlace correspondiente
+        sidebarLinks.forEach(link => {
+            if (currentPath.includes(link.getAttribute('href'))) {
+                link.classList.add('active');
+            }
+        });
+    }
 }
 
 // Ejecutar cuando se carga la página

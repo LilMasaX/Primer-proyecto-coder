@@ -263,10 +263,63 @@ label {
   margin-bottom: 5px;
 }
 
-/* Estilo de las cajas para datos financieros */
 .financial-data {
   display: grid; 
   gap: 15px; 
+}
+
+.btn-add{
+  background-color: #675baf;
+  color: #fff;
+  margin: 0.75rem 0;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.table-responsive {
+  color: #fff;
+  margin-top: 2vh;
+  background-color: #1e1e1e; 
+  width: 70%;
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.table-responsive table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1e1e1e; 
+}
+
+.table-responsive th, .table-responsive td {
+  padding: 10px;
+  background-color: #121212;
+  border: 1px solid #353434;
+  color: #fff; 
+}
+
+
+.table-responsive th {
+  background-color: #675baf; 
+  color: #fff;
+}
+
+/* Change the background color of table rows */
+.table-responsive tr:nth-child(even) {
+  background-color: #675baf; 
+}
+
+.table-responsive tr:nth-child(odd) {
+  background-color: #675baf; 
 }
 
 .data-row { 
