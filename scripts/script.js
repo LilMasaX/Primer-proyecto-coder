@@ -32,7 +32,7 @@ function setActiveLink() {
                 link.classList.add('active');
             }
         });
-    }
+    }3
 }
 
 // Ejecutar cuando se carga la página
