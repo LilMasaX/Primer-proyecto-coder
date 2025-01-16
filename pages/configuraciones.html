@@ -51,41 +51,74 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="./aportes.html" class="sidebar-link">
-                        <i class="lni lni-placeholder-dollar"></i>
-                        <span>Aportes</span>
+                    <a href="./configuraciones.html" class="sidebar-link active">
+                        <i class="lni lni-cog"></i>
+                        <span>Configuraciones</span>
                     </a>
                 </li>
             </ul>
-            <!-- Sidebar Navigation Ends -->
-            <div class="sidebar-footer">
-                <a href="./configuraciones.html" class="sidebar-link">
-                    <i class="lni lni-gear-1"></i>
-                    <span>Configuraciones</span>
-                </a>
-            </div>
         </aside>
-        <!-- Sidebar Ends -->
+
         <!-- Main Component -->
-        <div class="main">
-            <nav class="navbar navbar-expand">
-                <button class="toggler-btn" type="button">
-                    <i class="lni lni-menu-hamburger-1"></i>
-                </button>
-            </nav>
-            <main class="p-3">
+        <main class="main">
+            <div class="main-content">
                 <header>
                     <h1>Configuraciones</h1>
-                    <p>Configue su business case para que funcione de manera efectiva   </p>
+                    <p>Aquí puedes agregar cursos y cambiar los precios de los exámenes.</p>
                 </header>
-                
-            </main>
-        </div>
+                <section class="cotizador-form">
+                    <form id="course-form">
+                        <div class="form-group">
+                            <label for="course-name">Nombre del Curso</label>
+                            <input type="text" id="course-name" class="input-field" placeholder="Nombre del Curso">
+                        </div>
+                        <div class="form-group">
+                            <label for="course-price">Precio del Curso</label>
+                            <input type="number" id="course-price" class="input-field" placeholder="Precio del Curso">
+                        </div>
+                        <div class="form-group">
+                            <label for="exam-price">Precio del Examen</label>
+                            <input type="number" id="exam-price" class="input-field" placeholder="Precio del Examen">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn-add" onclick="addCourse()">Agregar Curso</button>
+                        </div>
+                    </form>
+                    <div id="course-list" class="financial-data">
+                        <!-- Aquí se mostrarán los cursos agregados -->
+                    </div>
+                </section>
+            </div>
+        </main>
     </div>
     <script src="../scripts/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script>
+        function addCourse() {
+            const courseName = document.getElementById('course-name').value;
+            const coursePrice = document.getElementById('course-price').value;
+            const examPrice = document.getElementById('exam-price').value;
+
+            if (courseName && coursePrice && examPrice) {
+                const courseList = document.getElementById('course-list');
+                const courseItem = document.createElement('div');
+                courseItem.className = 'info-card';
+                courseItem.innerHTML = `
+                    <h2>${courseName}</h2>
+                    <p>Precio del Curso: $${coursePrice}</p>
+                    <p>Precio del Examen: $${examPrice}</p>
+                `;
+                courseList.appendChild(courseItem);
+
+                // Clear the form
+                document.getElementById('course-form').reset();
+            } else {
+                alert('Por favor, completa todos los campos.');
+            }
+        }
+    </script>
 </body>
 
 </html>
