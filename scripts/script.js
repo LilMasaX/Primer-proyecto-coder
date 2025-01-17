@@ -33,3 +33,25 @@ document.addEventListener('DOMContentLoaded', setActiveLink);
 window.addEventListener('popstate', setActiveLink);
 
 
+// function addCourse() {
+//     const courseName = document.getElementById('course-name').value;
+//     const coursePrice = document.getElementById('course-price').value;
+//     const examPrice = document.getElementById('exam-price').value;
+
+//     if (courseName && coursePrice && examPrice) {
+//         const courseList = document.getElementById('course-list');
+//         const courseItem = document.createElement('div');
+//         courseItem.className = 'info-card';
+//         courseItem.innerHTML = `
+//             <h2>${courseName}</h2>
+//             <p>Precio del Curso: $${coursePrice}</p>
+//             <p>Precio del Examen: $${examPrice}</p>
+//         `;
+//         courseList.appendChild(courseItem);
+
+//         // Clear the form
+//         document.getElementById('course-form').reset();
+//     } else {
+//         alert('Por favor, completa todos los campos.');
+//     }
+// }

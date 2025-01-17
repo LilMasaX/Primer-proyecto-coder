@@ -1,0 +1,43 @@
+@import 'variables';
+
+// TABLAS
+.table-responsive {
+  color: $color-white;
+  margin-top: 2vh;
+  background-color: $color-darker;
+  width: 70%;
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: $color-darker;
+
+    th,
+    td {
+      padding: 10px;
+      background-color: $color-dark;
+      border: 1px solid $color-border;
+      color: $color-white;
+    }
+
+    th {
+      background-color: $color-purple;
+      color: $color-white;
+    }
+
+    // Filas pares e impares
+    tr:nth-child(even),
+    tr:nth-child(odd) {
+      background-color: $color-purple;
+    }
+  }
+}
+
+

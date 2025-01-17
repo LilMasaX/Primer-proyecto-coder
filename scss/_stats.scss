@@ -1,0 +1,44 @@
+@import 'variables';
+
+// STATS
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.info-card {
+  background-color: $color-darker;
+  display: flex;
+  flex-direction: column;
+  color: $color-white;
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 10px;
+  box-shadow: $box-shadow-dark;
+  flex: 1 1 calc(33.333% - 2rem);
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.350rem;
+  }
+
+  li {
+    margin-left: 0.21rem;
+  }
+}
+
+.percentage {
+  color: $color-purple;
+}
+
+.progress-bar {
+  background-color: $color-gray;
+}
+
+.progress {
+  width: 34.5%;
+}
+
+

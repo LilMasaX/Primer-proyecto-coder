@@ -1,0 +1,14 @@
+@import 'variables';
+
+// FOOTER
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: $color-darker;
+  color: $color-white;
+  text-align: center;
+  padding: 5vh 0;
+}
+
+

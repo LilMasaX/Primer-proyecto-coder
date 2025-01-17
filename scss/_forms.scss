@@ -1,0 +1,58 @@
+@import 'variables';
+
+// FORMULARIOS
+.cotizador-form {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-curso {
+  width: 101.5%;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1rem;
+  color: $color-gray-light;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-field {
+  width: 100%;
+  display: block;
+  padding: 1rem;
+  margin-top: 5px;
+  border: 1px solid $color-gray;
+  border-radius: 5px;
+  background-color: $color-darker;
+  color: $color-white;
+  font-size: 1rem;
+
+  &:focus {
+    border-color: $color-purple;
+    outline: none;
+  }
+}
+
+.financial-data {
+  display: grid;
+  gap: 15px;
+}
+
+.btn-add {
+  background-color: $color-purple;
+  color: $color-white;
+  margin: 0.75rem 0;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+

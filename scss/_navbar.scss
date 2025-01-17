@@ -1,0 +1,19 @@
+@import 'variables';
+
+// NAVBAR
+.navbar {
+  padding: 1.15rem 1.5rem;
+  border-bottom: 2px dashed $color-gray-light;
+}
+
+.toggler-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+
+  i {
+    font-size: 1.50rem;
+    color: $color-primary;
+    font-weight: 1000;
+  }
+}
